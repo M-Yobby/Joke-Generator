@@ -1,6 +1,6 @@
 # Joke Generator
-import random
-
+import random #Random module to select jokes
+# This script generates random jokes from a predefined list when the user inputs 'Haha'.
 jokes = [
     "I only know 25 letters of the alphabet. I don’t know y.",
     "Why don’t skeletons fight each other? They don’t have the guts.",
@@ -24,19 +24,21 @@ jokes = [
     "I don’t trust those trees. They seem kind of shady."
 ]
 
-def get_random_joke():
-    return random.choice(jokes)
+def get_random_joke(): # Function to get a random joke
+    """Returns a random joke from the jokes list."""
+    return random.choice(jokes) # Select a random joke  
 
-def main():
+def main(): # Main function to run the joke generator
     print("Welcome to the Joke Generator!")
-    while True:
+    while True: # Loop to keep the program running until the user decides to exit
         user_input = input("Type 'Haha' to get a joke or type 'exit' to quit: ")
-        if user_input.lower() == 'exit':
+        if user_input.lower() == 'exit': # .lower() to handle case insensitivity
             print("Thanks for using the Joke Generator! Goodbye!")
-            break
+            break # break the loop to exit the program
         elif user_input.lower() == 'haha':
             print(get_random_joke())
             # ...existing code...
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": # Entry point of the script
+    main() # Run the main function
+# This code will keep prompting the user for input until they type 'exit'.
